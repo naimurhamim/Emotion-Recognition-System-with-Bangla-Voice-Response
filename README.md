@@ -23,10 +23,10 @@
 
 ### *Real-Time Facial Emotion Detection — Powered by DeepFace + Microsoft Neural TTS*
 
-> **একটি বুদ্ধিমান emotion detection system যা ব্যবহারকারীর মুখের অভিব্যক্তি বিশ্লেষণ করে**
-> **এবং সেই অনুযায়ী বাংলায় কথা বলে সাড়া দেয়।**
-> DeepFace দিয়ে real-time emotion detect করে, Microsoft Nabanita Neural Voice দিয়ে
-> ব্যক্তিগতকৃত Bangla response তৈরি করে — সম্পূর্ণ offline-capable desktop application।
+> **An intelligent emotion detection system that analyzes the user's facial expressions**
+> **and responds back in Bangla voice accordingly.**
+> Detects real-time emotion using DeepFace, then generates a personalized Bangla response
+> using Microsoft Nabanita Neural Voice — a fully offline-capable desktop application.
 
 [![Made by](https://img.shields.io/badge/Made%20by-MD%20Naimur%20Hamim-d4af37?style=flat-square)](https://github.com/naimurhamim)
 [![Year](https://img.shields.io/badge/Year-2026-d4af37?style=flat-square)](#)
@@ -37,7 +37,19 @@
 
 ---
 
-## 🎬 Demo Screenshots
+## 🎬 Demo Video
+
+<div align="center">
+
+[![Emotion Recognition System Demo](https://img.youtube.com/vi/VIDEO_ID_HERE/maxresdefault.jpg)](https://youtu.be/VIDEO_ID_HERE)
+
+**▶ [Watch Full Demo on YouTube](https://youtu.be/VIDEO_ID_HERE)**
+
+</div>
+
+---
+
+## 📸 Demo Screenshots
 
 | Neutral Detection | Fear Detection |
 |---|---|
@@ -47,37 +59,37 @@
 |---|---|
 | ![Angry](Screenshots/angry.png) | ![Happy](Screenshots/happy.png) |
 
-> System টি real-time এ মুখের অভিব্যক্তি detect করে, emotion score দেখায় এবং Bangla voice এ response দেয়।
+> The system detects facial expressions in real time, displays emotion scores, and responds with a Bangla voice output.
 
 ---
 
 ## 📌 Project Overview
 
-Emotion Recognition System একটি AI-powered desktop application যা মানুষের মুখের ছবি বিশ্লেষণ করে তার মানসিক অবস্থা বোঝার চেষ্টা করে এবং সেই অনুযায়ী বাংলা ভাষায় সাড়া দেয়।
+The Emotion Recognition System is an AI-powered desktop application that analyzes a person's facial expression to understand their emotional state and responds in Bangla language accordingly.
 
-মানুষ যখন দুঃখী থাকে, রাগান্বিত থাকে বা হতাশ থাকে — তখন একটি সহানুভূতিশীল সাড়া তার মনে ইতিবাচক প্রভাব ফেলতে পারে। এই system টি সেই ধারণাকে বাস্তবে রূপ দেওয়ার একটি প্রচেষ্টা।
+When a person is sad, angry, or frustrated — a compassionate response can have a positive impact on their mood. This system is an attempt to bring that idea to life.
 
-**মূল লক্ষ্য:**
-- Webcam থেকে real-time এ মুখের অভিব্যক্তি detect করা
-- Detected emotion অনুযায়ী ব্যক্তিগতকৃত Bangla response তৈরি করা
-- Microsoft Nabanita Neural Voice দিয়ে সেই response শোনানো
-- সম্পূর্ণ desktop GUI application হিসেবে চালানো
+**Core Goals:**
+- Detect facial expressions in real time from a webcam
+- Generate personalized Bangla responses based on the detected emotion
+- Deliver the response via Microsoft Nabanita Neural Voice
+- Run as a complete desktop GUI application
 
 ---
 
 ## ✨ Features
 
-| Feature | বিবরণ |
+| Feature | Description |
 |---|---|
-| 😊 **Real-Time Emotion Detection** | Webcam থেকে একাধিক frame capture করে emotion analyze করা |
+| 😊 **Real-Time Emotion Detection** | Captures multiple frames from webcam and analyzes emotion |
 | 🎯 **8 Emotion Support** | Happy, Sad, Depressed, Angry, Surprised, Fear, Disgust, Neutral |
-| 🗣️ **Bangla Neural Voice** | Microsoft bn-BD-NabanitaNeural দিয়ে natural Bangla speech |
-| 📊 **Emotion Score Bars** | প্রতিটি emotion এর confidence score visual bar এ দেখানো |
-| 👤 **Personalized Response** | ব্যবহারকারীর নাম নিয়ে ব্যক্তিগতকৃত সাড়া |
-| 🖥️ **Desktop GUI** | PyQt6 দিয়ে তৈরি Gold/Silver/Black themed desktop app |
-| ⚡ **Multi-Frame Analysis** | একাধিক frame এর dominant emotion নির্ধারণ করে accuracy বাড়ানো |
-| 🔄 **Replay Voice** | যেকোনো সময় voice response আবার শোনার সুবিধা |
-| 🚀 **Single Command Launch** | একটি command এ backend + GUI একসাথে চালু হয় |
+| 🗣️ **Bangla Neural Voice** | Natural Bangla speech using Microsoft bn-BD-NabanitaNeural |
+| 📊 **Emotion Score Bars** | Visual confidence score bars for each detected emotion |
+| 👤 **Personalized Response** | Responses personalized with the user's name |
+| 🖥️ **Desktop GUI** | Gold/Silver/Black themed desktop app built with PyQt6 |
+| ⚡ **Multi-Frame Analysis** | Determines dominant emotion across multiple frames for better accuracy |
+| 🔄 **Replay Voice** | Replay the voice response at any time |
+| 🚀 **Single Command Launch** | Backend and GUI both start together with a single command |
 
 ---
 
@@ -101,31 +113,31 @@ Emotion Recognition System একটি AI-powered desktop application যা �
 ```
 Webcam → Frame Capture (3–10 frames)
         ↓
-DeepFace Emotion Analysis → প্রতিটি frame এ emotion detect
+DeepFace Emotion Analysis → Detect emotion in each frame
         ↓
-Dominant Emotion নির্ধারণ → সব frame এর most common emotion
+Dominant Emotion Selection → Most common emotion across all frames
         ↓
-Response Generation → Emotion + User Name দিয়ে Bangla text তৈরি
+Response Generation → Generate Bangla text using Emotion + User Name
         ↓
-Edge TTS (Nabanita Neural) → Bangla text থেকে voice generate
+Edge TTS (Nabanita Neural) → Convert Bangla text to voice
         ↓
-GUI তে Result দেখানো → Emotion, Score Bars, Response Text, Audio Player
+GUI Result Display → Emotion, Score Bars, Response Text, Audio Player
 ```
 
 ---
 
 ## 📊 Emotion → Response Mapping
 
-| Emotion | Response ধরন |
+| Emotion | Response Type |
 |---|---|
-| 😊 Happy | উৎসাহমূলক কথা, আনন্দ বাড়ানো |
-| 😢 Sad | সহানুভূতি + হালকা রসিকতা |
-| 😔 Depressed | অনুপ্রেরণামূলক কথা |
-| 😠 Angry | শান্ত করার কথা |
-| 😲 Surprised | কৌতূহলী প্রতিক্রিয়া |
-| 😨 Fear | আশ্বস্ত করার কথা |
-| 🤢 Disgust | ইতিবাচক দৃষ্টিভঙ্গি |
-| 😐 Neutral | বন্ধুত্বপূর্ণ কথোপকথন |
+| 😊 Happy | Encouraging words, amplifying the joy |
+| 😢 Sad | Empathy + light humor to lift the mood |
+| 😔 Depressed | Motivational and uplifting words |
+| 😠 Angry | Calming and soothing response |
+| 😲 Surprised | Curious and playful reaction |
+| 😨 Fear | Reassuring and comforting words |
+| 🤢 Disgust | Positive reframing and optimism |
+| 😐 Neutral | Friendly conversational response |
 
 ---
 
@@ -134,20 +146,20 @@ GUI তে Result দেখানো → Emotion, Score Bars, Response Text, Aud
 ```
 emotion-recognition/
 │
-├── run_gui.py              # Single entry point — backend + GUI একসাথে চালু করে
-├── run.py                  # শুধু backend চালানোর জন্য
+├── run_gui.py              # Single entry point — starts backend + GUI together
+├── run.py                  # Run backend only
 ├── README.md
 │
 ├── 📁 backend/
 │   ├── main.py             # FastAPI server — REST API endpoints
-│   ├── emotion_engine.py   # DeepFace দিয়ে emotion detection logic
+│   ├── emotion_engine.py   # Emotion detection logic using DeepFace
 │   ├── voice_engine.py     # Edge TTS — Nabanita Neural voice generation
 │   ├── response_map.py     # Emotion → Bangla response mapping
 │   ├── requirements.txt    # Python dependencies
 │   └── 📁 audio/           # Generated voice files (auto-created)
 │
 ├── 📁 gui/
-│   └── app.py              # PyQt6 desktop GUI — সম্পূর্ণ UI
+│   └── app.py              # PyQt6 desktop GUI — complete UI
 │
 ├── 📁 dataset/
 │   ├── 📁 train/           # Training images (angry/happy/sad/...)
@@ -166,16 +178,16 @@ emotion-recognition/
 
 - Python **3.10**
 - Webcam
-- Internet connection (Edge TTS এর জন্য)
+- Internet connection (required for Edge TTS)
 
-### 1. Repository Clone করো
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/naimurhamim/emotion-recognition-system.git
 cd emotion-recognition-system
 ```
 
-### 2. Virtual Environment তৈরি করো
+### 2. Create Virtual Environment
 
 ```bash
 py -3.10 -m venv .venv
@@ -184,39 +196,39 @@ py -3.10 -m venv .venv
 .venv\Scripts\activate
 ```
 
-### 3. Dependencies Install করো
+### 3. Install Dependencies
 
 ```bash
 pip install -r backend/requirements.txt
 ```
 
-### 4. App চালাও
+### 4. Run the App
 
 ```bash
 python run_gui.py
 ```
 
-> প্রথমবার চালালে DeepFace automatically তার model download করবে (~100MB) — এটা একবারই হবে।
+> On first run, DeepFace will automatically download its model (~100MB) — this only happens once.
 
 ---
 
 ## ⚙️ API Endpoints
 
-Backend FastAPI server `http://127.0.0.1:8000` এ চলে।
+The backend FastAPI server runs at `http://127.0.0.1:8000`.
 
-| Method | Endpoint | বিবরণ |
+| Method | Endpoint | Description |
 |---|---|---|
 | GET | `/` | API status check |
 | GET | `/health` | Health check |
-| POST | `/analyze` | Frames analyze করে emotion + voice return করে |
-| GET | `/emotions` | Supported emotions এর list |
+| POST | `/analyze` | Analyzes frames and returns emotion + voice response |
+| GET | `/emotions` | Returns list of supported emotions |
 
 ### `/analyze` Request Body
 
 ```json
 {
   "frames": ["base64_image_1", "base64_image_2"],
-  "user_name": "নাইমুর"
+  "user_name": "Naimur"
 }
 ```
 
@@ -227,7 +239,7 @@ Backend FastAPI server `http://127.0.0.1:8000` এ চলে।
   "dominant_emotion": "happy",
   "avg_scores": { "happy": 92.5, "neutral": 5.2, "sad": 2.3 },
   "frame_count": 5,
-  "response_text": "নাইমুর, তোমার হাসিটা কত সুন্দর তুমি কি জানো?",
+  "response_text": "Naimur, do you know how beautiful your smile is?",
   "audio_url": "/static/audio/abc123.mp3"
 }
 ```
@@ -238,29 +250,29 @@ Backend FastAPI server `http://127.0.0.1:8000` এ চলে।
 
 ### Emotion Detection Pipeline
 
-DeepFace library ব্যবহার করে pre-trained FER (Facial Expression Recognition) model দিয়ে emotion detect করা হয়। প্রতিটি frame এ 7টি base emotion এর probability score বের করা হয় এবং সব frame এর dominant emotion এর majority vote নেওয়া হয়।
+The system uses the DeepFace library with a pre-trained FER (Facial Expression Recognition) model to detect emotions. For each frame, probability scores are generated for 7 base emotions, and the dominant emotion is determined by majority vote across all captured frames.
 
 ### Multi-Frame Strategy
 
-Single frame এ noise বা partial occlusion এর কারণে ভুল detection হতে পারে। তাই 3–10টি frame capture করে সব frame এর dominant emotion এর মধ্যে সবচেয়ে বেশিবার আসা emotion কে final result হিসেবে নেওয়া হয়।
+A single frame can produce incorrect detections due to noise or partial occlusion. To address this, 3–10 frames are captured and the most frequently occurring dominant emotion across all frames is selected as the final result.
 
 ### Voice Response System
 
-Microsoft Edge TTS এর `bn-BD-NabanitaNeural` voice ব্যবহার করা হয়েছে — এটি Bangladeshi Bangla এর জন্য Microsoft এর neural voice যা free এবং natural শোনায়। Response text গুলো pure Bangla Unicode তে লেখা যাতে TTS সঠিকভাবে pronounce করতে পারে।
+Microsoft Edge TTS with the `bn-BD-NabanitaNeural` voice is used — Microsoft's neural voice for Bangladeshi Bangla that is free and sounds natural. All response texts are written in pure Bangla Unicode so the TTS engine pronounces them correctly.
 
 ---
 
 ## 📈 Future Plans
 
-- [ ] **Custom Dataset Training** — নিজস্ব dataset দিয়ে model fine-tune করা
-- [ ] **Offline Voice** — Internet ছাড়া local TTS model integrate করা
-- [ ] **Emotion History** — Session এর emotion timeline track করা
-- [ ] **Multi-Face Detection** — একসাথে একাধিক মুখের emotion detect করা
-- [ ] **Mobile App** — Android/iOS version তৈরি করা
-- [ ] **Mental Health Integration** — দীর্ঘমেয়াদী emotion pattern বিশ্লেষণ
-- [ ] **Custom Voice Training** — নিজস্ব Bangla voice model train করা
-- [ ] **Emotion-Based Music** — Detected emotion অনুযায়ী background music play করা
-- [ ] **Report Generation** — Daily/weekly emotion report তৈরি করা
+- [ ] **Custom Dataset Training** — Fine-tune the model with a custom dataset
+- [ ] **Offline Voice** — Integrate a local TTS model that works without internet
+- [ ] **Emotion History** — Track emotion timeline throughout a session
+- [ ] **Multi-Face Detection** — Detect emotions from multiple faces simultaneously
+- [ ] **Mobile App** — Build an Android/iOS version
+- [ ] **Mental Health Integration** — Analyze long-term emotion patterns
+- [ ] **Custom Voice Training** — Train a custom Bangla voice model
+- [ ] **Emotion-Based Music** — Play background music based on detected emotion
+- [ ] **Report Generation** — Generate daily/weekly emotion summary reports
 
 ---
 
@@ -283,17 +295,17 @@ PyQt6==6.7.0
 
 ## 🤝 Contributing
 
-1. Fork করো
-2. Feature branch তৈরি করো: `git checkout -b feature/NewFeature`
-3. Commit করো: `git commit -m 'Add NewFeature'`
-4. Push করো: `git push origin feature/NewFeature`
-5. Pull Request খোলো
+1. Fork the repo
+2. Create your feature branch: `git checkout -b feature/NewFeature`
+3. Commit: `git commit -m 'Add NewFeature'`
+4. Push: `git push origin feature/NewFeature`
+5. Open a Pull Request
 
 ---
 
 ## 📄 License
 
-**MIT License** — বিস্তারিত [LICENSE](LICENSE) দেখো।
+Licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
 
 ---
 
