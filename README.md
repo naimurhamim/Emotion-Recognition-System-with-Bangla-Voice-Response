@@ -41,9 +41,9 @@
 
 <div align="center">
 
-[![Emotion Recognition System Demo](https://img.youtube.com/vi/VIDEO_ID_HERE/maxresdefault.jpg)](https://youtu.be/VIDEO_ID_HERE)
+[![Emotion Recognition System Demo](https://img.youtube.com/vi/CaWDi2o_nqw/maxresdefault.jpg)](https://youtu.be/CaWDi2o_nqw)
 
-**▶ [Watch Full Demo on YouTube](https://youtu.be/VIDEO_ID_HERE)**
+**▶ [Watch Full Demo on YouTube](https://youtu.be/CaWDi2o_nqw)**
 
 </div>
 
